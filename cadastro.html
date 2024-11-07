@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>Filmes News</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="header"></div>
+        <h1 id="Titulo">Filmes News</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="noticias.php">Notícias</a></li> 
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                      
+            </ul>
+        </nav> 
+    </header> 
+    <br>
+    <form action="enviar.php" method="POST">
+        <fieldset class="fundo">
+        <div class="cabeçalho">   
+        <h1 >Cadastro de Notícias</h1>
+        </div> 
+        <br><br>   
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <br><br>
+        <label for="conteudo">Conteúdo:</label>
+        <textarea id="conteudo" name="conteudo" required></textarea>
+        <br><br>
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor">
+        <br><br>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="ativa">Ativa</option>
+            <option value="inativa">Inativa</option>
+        </select>
+        <br><br>
+        <br><br> 
+        <button type="submit">Cadastrar Notícia</button>
+    </fieldset>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+<footer>
+        <h3 id="footer">Copyright  2024 Filmes News – Todos os direitos reservados</h3>
+       </footer>    
+</body>
+</html>

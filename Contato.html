@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Filmes News</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="header"></div>
+        <h1 id="Titulo">Filmes News</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="noticias.php">Notícias</a></li> 
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                          
+            </ul>
+        </nav> 
+    </header> 
+    <br>
+    <br>
+    <br>
+    <form action="teste.php" method="post">
+        <fieldset class="fundo">
+        <div class="cabeçalho">
+          <h1 id="cima">Formulário</h1>
+        </div>
+          <br><br>  
+          <label id="dentro">Nome:</label>
+          <input type="text" name="Nome" id="Nome" required>
+          <br><br>
+          <label id="dentro">Email:</label>
+          <input type="email" name="Email" id="Email" required>
+          <br><br>
+          <br><br>
+          <button class="botao" type="submit">Enviar</button>
+        </fieldset>        
+    </form> 
+
+    <script>
+        function validarFormulario(event) {
+            
+            event.preventDefault();
+
+            
+            const nome = document.getElementById("Nome").value;
+            const email = document.getElementById("Email").value;
+
+            
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            
+            if (nome.trim() === "") {
+                alert("Por favor, preencha o campo Nome.");
+                return false;
+            }
+
+           
+            if (email.trim() === "") {
+                alert("Por favor, preencha o campo Email.");
+                return false;
+            } else if (!emailPattern.test(email)) {
+                alert("Por favor, insira um endereço de email válido.");
+                return false;
+            }
+
+          
+            document.querySelector("form").submit();
+        }
+
+        
+        window.onload = function() {
+            document.querySelector("form").onsubmit = validarFormulario;
+        };
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <h3 id="footer">Copyright  2024 Filmes News – Todos os direitos reservados</h3>
+       </footer>   
+</body>
+</html>
